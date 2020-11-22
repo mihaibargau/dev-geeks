@@ -10,6 +10,7 @@ class TestHero extends TestCase
         $hero = new Hero();
 
         $this->assertEquals(1, $hero->isAlive());
+        $this->assertEquals("Hero", $hero->getType());
 
         $this->assertGreaterThanOrEqual(65, $hero->getHp());
         $this->assertLessThanOrEqual(95, $hero->getHp());
