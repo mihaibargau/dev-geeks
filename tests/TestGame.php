@@ -9,7 +9,7 @@ class TestGame extends TestCase
     {
         $hero = new Hero();
         $beast = new Beast();
-        $this->assertContains(Game::heroAttacksFirst($hero, $beast), array(true, false));
+        $this->assertContains(Game::heroAttacksFirst($hero, $beast), [true, false]);
     }
 
     public function testMaxRounds()

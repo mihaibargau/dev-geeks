@@ -2,6 +2,7 @@
 use PHPUnit\Framework\TestCase;
 require_once ('../models/Beast.php');
 require_once ('../models/Hero.php');
+require_once ('../models/Entity.php');
 class TestHero extends TestCase
 {
     public function testHeroConstructor()
@@ -11,6 +12,8 @@ class TestHero extends TestCase
 
         $this->assertEquals(1, $hero->isAlive());
         $this->assertEquals("Hero", $hero->getType());
+        $this->assertInstanceOf('Entity', $hero);
+        $this->assertInstanceOf('Hero', $hero);
 
         $this->assertGreaterThanOrEqual(65, $hero->getHp());
         $this->assertLessThanOrEqual(95, $hero->getHp());

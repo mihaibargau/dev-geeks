@@ -63,17 +63,16 @@ class Game
 
     public static function heroAttacksFirst(Hero $hero, Beast $beast)
     {
-        $heroAttacksFirst = false;
         if ($hero->getSpeed() > $beast->getSpeed()) {
-            $heroAttacksFirst = true;
+            return true;
         }
-        else if ($hero->getSpeed() < $beast->getSpeed()){
-            $heroAttacksFirst = false;
+        elseif ($hero->getSpeed() < $beast->getSpeed()){
+            return false;
         }
-        else if ($hero->getLuck() > $beast->getLuck()){
-            $heroAttacksFirst = true;
+        elseif ($hero->getLuck() > $beast->getLuck()){
+            return true;
         }
-        return $heroAttacksFirst;
+        return false;
     }
 
     public function displayStats(Hero $hero, Beast $beast)

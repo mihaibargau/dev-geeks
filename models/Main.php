@@ -7,7 +7,7 @@ $Carl = new Hero();
 $Beast = new Beast();
 $Game = new Game();
 echo "<!DOCTYPE html>";
-echo "<html>";
+echo "<html lang='en'>";
 echo "<body>";
 $Game->playGame($Carl, $Beast);
 echo "</body>";

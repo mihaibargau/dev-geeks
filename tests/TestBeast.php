@@ -11,6 +11,8 @@ class TestBeast extends TestCase
         $this->assertEquals(1, $beast->isAlive());
 
         $this->assertEquals("Beast", $beast->getType());
+        $this->assertInstanceOf('Entity', $beast);
+        $this->assertInstanceOf('Beast', $beast);
 
         $this->assertGreaterThanOrEqual(50, $beast->getPower());
         $this->assertLessThanOrEqual(80, $beast->getPower());
